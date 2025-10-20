@@ -1,0 +1,420 @@
+
+/* todos os elementos são resetado */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* adição do grid ao body, e a imagen de função com uma animação para que ela
+varie de um canto ao outro da tela infinitamente */
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(11, 200px);
+    background-image: url(../img/backgrond_body_blue.jpg);
+    background-size: 300% 300%;
+    animation: gradient 5s infinite alternate;
+}
+
+
+/* organização dos elementos principais no body */
+.header {
+    grid-column: 1/17;
+    grid-row: 1;
+}
+
+.nav {
+    display: flex;
+    height: max-content(200px);
+    height: min-content(100px);
+    grid-column: 3/15;
+    grid-row: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+}
+
+.main {
+    grid-column: 3/15;
+    grid-row: 2/6;
+
+}
+
+.section {
+    position: relative;
+    z-index: auto;
+    padding: 60px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 12px 9px 22px -9px rgba(0, 0, 0, 0.4);
+}
+
+aside.Certify {
+    position: relative;
+    z-index: 13;
+    display: none;
+    z-index: 2;
+    align-self: center;
+    justify-self: center;
+    grid-column: 3/15;
+    grid-row: 1/6;
+}
+
+
+/* classe com display block que é adicionada ao aside e a div com classe "sombreado"
+   quando o botão "certificado" é clicado */
+.displayBlock {
+    display: block !important;
+}
+
+div.sombreado {
+    display: none;
+    position: fixed;
+    opacity: 0.5;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+div.msgSucess {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    grid-column: 5/13;
+    grid-row: 2/5;
+}
+
+/* classe display para ser adicionada a div com a classe "msgSucess" quando o formulário é enviado com sucesso */
+
+div.msgSucess.display {
+    display: flex !important;
+}
+
+
+div.iconMode {
+    z-index: 0;
+    transform: translateX(100px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* classes com as animações para esconder e exibir os botões de modo claro e escuro */
+
+.exibirMode {
+    animation: exibirMode 1s forwards;
+}
+
+.esconderMode {
+    animation: esconderMode 1s forwards;
+}
+
+/* esta classe a uma div "invisivel" que possui as mesmas propriedades da div com classe "iconMode"
+   porem esta é pai dela, e com a propriedade overflow em hidden, faz com que a div com a classe
+   "iconMode" se esconda */
+div.iconMolde {
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 350px;
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-column: 1/17;
+    grid-row: 10/12;
+    padding: 60px;
+    background-color: white;
+    box-shadow: 12px 9px 22px -9px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+    margin-top: 20px;
+}
+
+li {
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+/* definindo a propriedade display como none, para que o conteudo fique oculto e só seja
+exibido em um determinado intervalo de media querie, para o menu responsivo */
+
+div.menu {
+    display: none;
+}
+
+div.menuResponsive {
+    display: none;
+}
+
+/* mudanças das tags e classes para quando a largura de tela for no maximo 500px */
+@media only screen and (max-width:500px) {
+    nav>a {
+        display: none;
+    }
+
+    body {
+        grid-template-rows: repeat(32, 100px);
+        background-size: cover;
+    }
+
+    body.gridRows {
+        grid-template-rows: repeat(12, 100px);
+    }
+
+    .main {
+        grid-column: 2/16;
+        grid-row: 2;
+    }
+
+    .section {
+        padding: 15px;
+        grid-row: 2;
+    }
+
+    .nav {
+        height: 100px;
+        grid-column: 2/16;
+        grid-row: 1;
+    }
+
+    form {
+        margin-left: 10px;
+    }
+
+    /* ativação do display do menu de navegação */
+    div.menu {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        left: 15px;
+
+        transition: transform 200ms cubic-bezier(.2, .9, .3, 1);
+        transform-origin: center center;
+    }
+
+    div.menu:hover {
+        transform: scale(1.2);
+    }
+
+    div.menu:active {
+        transform: scale(0.98);
+    }
+
+
+    div.menuResponsive {
+        position: absolute;
+        z-index: 5;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: start;
+    }
+
+    div.espaco {
+        width: 20px !important;
+    }
+
+    div.msgSucess {
+        grid-column: 5/13;
+        grid-row: 4/7;
+    }
+
+    div.iconMolde {
+        right: 130px;
+        width: 63px;
+        height: 28px;
+    }
+
+    div.iconMode {
+        width: 63px;
+        height: 28px;
+    }
+
+    footer {
+        justify-content: space-evenly;
+        padding: 20px;
+        grid-row: 31/33;
+    }
+
+    ul {
+        margin-left: 8px;
+        margin-top: 1px;
+    }
+
+    li {
+        margin-top: 5px;
+        list-style-type: none;
+    }
+
+}
+
+/* mudanças das tags e classes para quando a largura de tela estiver entre 500 e 1101 px*/
+@media (min-width: 501px) and (max-width: 1100px) {
+    nav>a {
+        display: none;
+    }
+
+    body {
+        grid-template-rows: repeat(21, 100px);
+        background-size: cover;
+    }
+
+    body.gridRows {
+        grid-template-rows: repeat(8, 100px);
+    }
+
+    div.msgSucess {
+        grid-column: 5/13;
+        grid-row: 2/5;
+    }
+
+    .main {
+        grid-column: 2/16;
+        grid-row: 2;
+    }
+
+    .section {
+        padding: 15px;
+        grid-row: 2;
+    }
+
+    .nav {
+        height: 100px;
+        grid-column: 2/16;
+        grid-row: 1;
+    }
+
+    form {
+        margin-left: 10px;
+    }
+
+    div.menu {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        left: 15px;
+
+        transition: transform 200ms cubic-bezier(.2, .9, .3, 1);
+        transform-origin: center center;
+    }
+
+    div.menu:hover {
+        transform: scale(1.2);
+    }
+
+    div.menu:active {
+        transform: scale(0.98);
+    }
+
+
+    div.menuResponsive {
+        position: absolute;
+        z-index: 5;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: start;
+    }
+
+    div.espaco {
+        width: 20px !important;
+    }
+
+    div.iconMolde {
+        right: 180px;
+        width: 72px;
+        height: 32px;
+    }
+
+    div.iconMode {
+        width: 72px;
+        height: 32px;
+    }
+
+    footer {
+        justify-content: space-evenly;
+        padding: 20px;
+        grid-row: 31/33;
+    }
+
+    ul {
+        margin-left: 8px;
+        margin-top: 1px;
+    }
+
+    li {
+        margin-top: 5px;
+        list-style-type: none;
+    }
+
+
+
+
+
+}
+
+/* as configurações de media querie abaixo são apenas para mudar os botões de configuração de modo
+   de lugar, para que fiquem armonicos com o restante da tela */
+@media (min-width: 1601px) and (max-width: 1700px){
+    div.iconMolde {
+        right: 300px;
+    }
+}
+@media (min-width: 1501px) and (max-width: 1600px){
+    div.iconMolde {
+        right: 290px;
+    }
+}
+@media (min-width: 1401px) and (max-width: 1500px){
+    div.iconMolde {
+        right: 280px;
+    }
+}
+@media (min-width: 1301px) and (max-width: 1400px){
+    div.iconMolde {
+        right: 270px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1300px){
+    div.iconMolde {
+        right: 260px;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1200px){
+    div.iconMolde {
+        right: 250px;
+    }
+}

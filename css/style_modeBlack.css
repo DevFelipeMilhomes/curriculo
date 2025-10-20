@@ -1,0 +1,108 @@
+
+
+
+/* este arquivo contém os estilos para todos os elementos, apenas com mudanças nas cores
+para se adequarem ao modo escuro.
+cada item possui a mesma classe "modeBlack", apenas para facilitar na escrita e leitura quanto tambem no javaScript.
+a classe possue comportamentos diferentes pois os seletores são especificos */
+
+p.modeBlack{
+    color: white;
+}
+section.modeBlack{
+    background-color: rgb(41, 41, 41);
+}
+div.iconMode.Black{
+    background-color: black !important;
+}
+h1.modeBlack{
+    color: white;
+}
+h2.modeBlack{
+    color: white;
+}
+span.modeBlack{
+    color: rgb(76, 116, 245);
+}
+a.linkExterno.modeBlack{
+    color: rgb(76, 116, 245);
+}
+a.links.marcado.modeBlack{
+    background-color: rgb(41, 41, 41);
+    color: rgb(76, 116, 245);
+}
+
+a.footer.modeBlack{
+    color: rgb(76, 116, 245);
+}
+
+
+footer.modeBlack{
+    background-color: rgb(41, 41, 41) ;
+}
+
+ul.modeBlack{
+    background-color: rgb(41, 41, 41) ;
+}
+
+li.modeBlack{
+    color: white;
+}
+
+label.modeBlack{
+    color: white;
+}
+input[type="text"].modeBlack{
+    color: white;
+    background-color:rgb(41, 41, 41) ;
+    border-color: rgb(76, 116, 245);
+}
+
+input[type="text"].modeBlack::placeholder{
+    color: rgb(173, 173, 173);
+}
+
+textarea.modeBlack{
+    color: white;
+    background-color:rgb(41, 41, 41) ;
+    border-color: rgb(76, 116, 245);
+}
+
+textarea.modeBlack::placeholder{
+    color: rgb(173, 173, 173);
+}
+
+@media only screen and (max-width:1100px){
+    a#link1.abrirMenu.modeBlack{
+        background-color: rgb(41, 41, 41);
+        color: white;
+    }
+    a#link2.abrirMenu.modeBlack{
+        background-color: rgb(41, 41, 41);
+        color: white;
+    }
+    a#link3.abrirMenu.modeBlack{
+        background-color: rgb(41, 41, 41);
+        color: white;
+    }
+    a#link4.abrirMenu.modeBlack{
+        background-color: rgb(41, 41, 41);
+        color: white;
+    }
+    a#link1.abrirMenu.marcado.modeBlack{
+        background-color: rgb(73, 73, 73);
+        color: rgb(76, 116, 245);
+    }
+    a#link2.abrirMenu.marcado.modeBlack{
+        background-color: rgb(73, 73, 73);
+        color: rgb(76, 116, 245);
+    }
+    a#link3.abrirMenu.marcado.modeBlack{
+        background-color: rgb(73, 73, 73);
+        color: rgb(76, 116, 245);
+    }
+    a#link4.abrirMenu.marcado.modeBlack{
+        background-color: rgb(73, 73, 73);
+        color: rgb(76, 116, 245);
+    }
+}

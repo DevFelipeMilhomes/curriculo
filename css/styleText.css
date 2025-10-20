@@ -1,0 +1,701 @@
+
+/* importação da font gratuita do google "DM Serif Text", serif */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+/* links do menu de navegação */
+a.links {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: "DM Serif Text", serif;
+    font-size: 22px;
+    margin: 10px 0 2px 0;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 19px -7px 34px -9px rgba(0, 0, 0, 0.4);
+
+    transition: transform 200ms cubic-bezier(.2, .9, .3, 1), box-shadow 200ms;
+    transform-origin: bottom center;
+}
+
+a.links:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+a.links:active {
+    transform: scale(0.93)
+}
+
+/* link marcado no momento para se destacar dos outros links */
+a.marcado {
+    position: relative;
+    box-shadow: 19px -7px 34px -9px rgba(0, 0, 0, 0.0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top: 100px;
+    padding: 25px;
+    width: 200px;
+    height: 180px;
+    background-color: white;
+    color: rgb(19, 19, 170);
+    text-align: center;
+}
+
+a.links.marcado:hover {
+    transform: none;
+}
+
+/* estilização dos links da pagina "Portifólio" */
+a.linkExterno {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: "DM Serif Text", serif;
+    font-style: italic;
+    color: rgb(19, 19, 170);
+    margin-left: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    transition: transform 200ms cubic-bezier(.2, .9, .3, 1);
+    transform-origin: bottom center;
+}
+
+a.linkExterno:hover {
+    transform: scale(1.02);
+}
+
+a.linkExterno:active {
+    transform: scale(0.98)
+}
+
+/* estilização dos links do footer */
+a.footer {
+    font-size: 16px;
+    font-family: "DM Serif Text", serif;
+    text-decoration: none;
+    color: rgb(19, 19, 170);
+    letter-spacing: 0.5px;
+}
+
+li {
+    font-size: 16px;
+    font-family: "DM Serif Text", serif;
+    letter-spacing: 0.5px;
+}
+
+/* estilo dos paragrafos */
+p.pg {
+    overflow: hidden;
+    font-family: "DM Serif Text", serif;
+    font-size: 22px;
+    line-height: 2.2;
+    text-align: justify;
+    margin-left: 20px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+
+}
+
+h1,
+h2 {
+    font-family: "DM Serif Text", serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 25px;
+}
+
+/* destaque para mudar a coloração de palavras chaves dos paragrafos */
+span.destaque {
+    color: rgb(19, 19, 170);
+}
+
+/* estilo dos nomes dos botões */
+span.bt {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "DM Serif Text", serif;
+}
+
+span.msgForm {
+    color: white;
+    font-family: "DM Serif Text", serif;
+    font-size: 20px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+abbr {
+    text-decoration: underline;
+    cursor: help;
+}
+
+label {
+    font-family: "DM Serif Text", serif;
+    font-size: 20px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    font-size: 15px;
+    font-family: "DM Serif Text", serif;
+    letter-spacing: 1px;
+    height: 140px;
+    width: 550px;
+    border-radius: 10px;
+    border: 2px solid rgb(19, 19, 170);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    font-family: "DM Serif Text", serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+/* mudanças das tags e classes para quando a largura de tela for no maximo 500px 
+diminuindo o tamanho da font e modificando margins e paddings*/
+@media only screen and (max-width:500px) {
+
+
+    h1,
+    h2 {
+        margin-top: 5px;
+        font-family: "DM Serif Text", serif;
+        margin-bottom: 5px;
+        font-size: 20px;
+
+    }
+
+    p.pg {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px !important;
+        word-spacing: 1px;
+        letter-spacing: 0.3px;
+    }
+
+    textarea {
+        font-size: 15px;
+        height: 140px;
+        width: 270px;
+    }
+
+    a.links {
+        align-items: center;
+        padding: 7px;
+        font-size: 12px;
+        width: 70px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        color: black;
+    }
+
+    /* os estilos abaixo escondem os links de navegação para telas maiores com opacity none
+     e evita que os eventos associados a esses elementos ocorram com pointer-events none */
+    a#link1 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link2 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link3 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link4 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a.linkExterno {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    span.bt {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+
+
+    /*  os estilos abaixo tornam visiveis os links de navegação do menu para telas menores,
+    e deixam cada link em posições diferentes em relação ao topo com variação de 55px em relação ao topo */
+    a#link1.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link2.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(55px);
+    }
+
+    a#link3.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(110px);
+    }
+
+    a#link4.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(165px);
+    }
+
+    a#link1.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+    }
+
+    a#link2.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(55px);
+    }
+
+    a#link3.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(110px);
+    }
+
+    a#link4.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(165px);
+
+    }
+
+    a#link1.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link2.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link3.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link4.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link1.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+    }
+
+    a#link2.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    a#link3.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    a#link4.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    li {
+        font-size: 8px;
+        font-family: "DM Serif Text", serif;
+        letter-spacing: 0.3px;
+    }
+
+    a.footer {
+        font-size: 8px;
+        font-family: "DM Serif Text", serif;
+        text-decoration: none;
+        color: rgb(19, 19, 170);
+        letter-spacing: 0.3px;
+    }
+
+
+}
+
+/* mudanças das tags e classes para quando a largura de tela estiver entre 500 e 1101 px*/
+@media (min-width: 501px) and (max-width: 1100px) {
+
+    h1,
+    h2 {
+        margin-top: 5px;
+        font-family: "DM Serif Text", serif;
+        margin-bottom: 5px;
+        font-size: 20px;
+
+    }
+
+    p.pg {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px !important;
+        word-spacing: 1px;
+        letter-spacing: 0.3px;
+    }
+
+    textarea {
+        font-size: 15px;
+        height: 140px;
+        width: 270px;
+    }
+
+    a.links {
+        align-items: center;
+        padding: 7px;
+        font-size: 14px;
+        width: 90px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        color: black;
+    }
+
+    a#link1 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link2 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link3 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a#link4 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease
+    }
+
+    a.linkExterno {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    span.bt {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+
+
+
+
+
+    a#link1.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link2.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(55px);
+    }
+
+    a#link3.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(110px);
+    }
+
+    a#link4.abrirMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(165px);
+    }
+
+    a#link1.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+    }
+
+    a#link2.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(55px);
+    }
+
+    a#link3.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(110px);
+    }
+
+    a#link4.abrirMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(165px);
+
+    }
+
+    a#link1.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link2.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link3.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link4.fecharMenu {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+    }
+
+    a#link1.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+    }
+
+    a#link2.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    a#link3.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    a#link4.fecharMenu.marcado {
+        background-color: rgb(218, 218, 218);
+        opacity: 1;
+        pointer-events: visible;
+        border-radius: 10px;
+        padding: 7px;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        color: rgb(19, 19, 170);
+        transform: translateX(30px);
+        transform: translateY(0px);
+    }
+
+    li {
+        font-size: 8px;
+        font-family: "DM Serif Text", serif;
+        letter-spacing: 0.3px;
+    }
+
+    a.footer {
+        font-size: 8px;
+        font-family: "DM Serif Text", serif;
+        text-decoration: none;
+        color: rgb(19, 19, 170);
+        letter-spacing: 0.3px;
+    }
+
+
+}
+
+/* apartir deste intervalo de tela o menu de navegação passa a ser o normal */
+@media (min-width: 1101px) and (max-width: 1700px) {
+    a.links {
+        font-size: 18px;
+        margin: 10px 10px 2px 0;
+        width: 150px;
+        height: 50px;
+    }
+
+    a.marcado {
+        top: 100px;
+        width: 150px;
+        height: 180px;
+    }
+}

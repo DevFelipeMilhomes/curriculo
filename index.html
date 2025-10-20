@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/styleText.css">
+    <link rel="stylesheet" href="css/style_Img&Figure.css">
+    <link rel="stylesheet" href="css/styleAnimations.css">
+    <link rel="stylesheet" href="css/styleButtons&inputs.css">
+    <link rel="stylesheet" href="css/style_modeBlack.css">
+</head>
+<!-- O id do body foi definido como 1 para indicar que é a pagina 1, assim como o id do body da página "Formação" é 2
+ isso será importante para adicionar ou remover a classe "marcado" no link que estiver rodando no momento -->
+<body id="1">
+    <header id="header" class="header">
+    </header>
+    <nav class="nav">
+        <!-- links do menu de navegação do site -->
+        <a href="index.html" id="link1" class="links marcado" >Sobre mim</a>
+        <a href="formacao.html" id="link2" class="links">Formação</a>
+        <a href="protifolio.html" id="link3" class="links">Portifólio</a>
+        <a href="contato.html" id="link4" class="links">Contato</a>
+        <!-- essa parte se refere ao menu de navegação para dispositivos com uma largura de tela menor, sendo exibido apenas 
+         em dispositivos com uma largura de tela abaixo de 1101 pixels  -->
+        <div class="menu">
+            <img src="img/menu_white.png" class="menu" alt="">
+        </div>
+        <div class="menuResponsive">
+            <a href="index.html" id="link1" class="links marcado">Sobre mim</a>
+            <a href="formacao.html" id="link2" class="links">Formação</a>
+            <a href="protifolio.html" id="link3" class="links">Portifólio</a>
+            <a href="contato.html" id="link4" class="links">Contato</a>
+        </div>
+        <!-- a unica função da div abaixo é dar um espaço entre o menu e as configurações -->
+        <div id="espaco" style="width: 300px;" ></div>
+        <!-- as divs abaixo estão relacionadas ao botão de configuração que contem o modo claro e escuro -->
+        <div class="iconMolde">
+            <div class="iconMode">
+                <div class="btBlackWhite">
+                    <img class="iconMode" id="btBlack" src="img/moon_black.png" style="margin-right: 7px;">
+                </div>
+                <div class="btBlackWhite">
+                    <img class="iconMode marcadoSun" id="btWhite" src="img/sun_black.png" style="margin-left: 7px;">
+                </div>
+            </div>
+        </div>
+        <div class="btModoEscu"><img src="img/settings_white.png" class="imgSettings" ></div>
+    </nav>
+    
+    <!-- conteúdo principal dentro de main e uma section -->
+    <main class="main">
+        <section class="section">
+            <figure>
+                <img class="Felipefoto" src="img/minha_imagem.jpg" alt="Foto de Felipe Barbosa que possui  
+                cabelos e barba escuras, vestindo uma camiseta preta, 
+                olhando diretamente para a câmera com um leve sorriso em um fundo cinza claro" >
+           </figure>
+           <p class="pg">Olá, meu nome é <span class="destaque">Felipe Barbosa</span>, tenho 21 anos e sou estudante do curso de Bacharelado em <span class="destaque">Engenharia 
+            de Software</span> na Universidade Uninter. Sou uma pessoa curiosa e dedicada, com grande interesse em compreender o 
+            funcionamento das coisas e aprimorar minhas habilidades continuamente.</p> <br>
+
+           <p class="pg">Tenho me aprofundado no campo da computação como um todo, com foco especial no desenvolvimento de software, 
+           e também venho dedicando esforços ao aprendizado do inglês, visando uma comunicação mais efetiva e um acesso 
+           ampliado ao conhecimento técnico global.</p>
+
+           <p class="pg">Tenho como principal hobby estudar e aprender continuamente, tendo especial apreço pelas áreas de matemática, 
+           filosofia e computação, que me ajudam a desenvolver o raciocínio lógico e a visão crítica — qualidades que 
+           considero essenciais tanto na vida acadêmica quanto profissional. <br>
+        
+           Possuo sólido conhecimento em algoritmos e lógica de programação, com experiência prática no desenvolvimento e resolução de problemas 
+           computacionais. Tenho domínio intermediário em <span class="destaque">TypeScript e JavaScript</span>, aplicando boas práticas de código e princípios de 
+           desenvolvimento moderno, como tambem possuo experiência prática em <span class="destaque"><abbr title="HyperText Markup Language, version 5">HTML5</abbr> 
+            e <abbr title="Cascading Style Sheets, version 3">CSS3</abbr></span>. <br>
+
+           Além disso, possuo conhecimento básico em Python e bom domínio de <span class="destaque"><abbr title="Structured Query Language">SQL</abbr></span>, com foco em MySQL, incluindo modelagem de dados, 
+           consultas otimizadas e administração básica de banco de dados. <br>
+
+           Utilizo diáriamente sistemas <span class="destaque">Linux</span>, com familiaridade em diferentes distribuições, 
+           especialmente <abbr title="Red Hat Enterprise Linux">RHEL</abbr>,
+           Debian e suas variantes, sendo Arch Linux a que utilizo no dia a dia, compreendendo comandos, gerenciamento de pacotes, permissões e ambientes de desenvolvimento. <br>
+
+           Também apresento bom conhecimento em design digital, com ênfase em conceitos de design minimalista, priorizando clareza, 
+           harmonia visual e funcionalidade nas interfaces e projetos. <br>
+
+           Atualmente, trabalho como frentista em um posto de combustível, experiência que tem contribuído para o meu senso 
+           de responsabilidade, disciplina, comunicação objetiva e capacidade de lidar com diferentes pessoas e situações. 
+           Além dos estudos, gosto de me exercitar regularmente, mantendo o equilíbrio entre corpo e mente. <br>
+
+           Busco uma oportunidade para ingressar na área de programação e desenvolvimento de software, onde possa aplicar 
+           e expandir meus conhecimentos técnicos, contribuindo com minha dedicação e capacidade de aprendizado contínuo.
+            </p>
+        </section>
+    </main>
+    <!-- Rodapé feito com listas não ordenadas -->
+    <footer>
+        <ul>
+            <li>Links Úteis:</li>
+            <li><a href="#header" class="footer">Voltar ao topo</a></li>
+            <li><a href="index.html" class="footer">Sobre mim</a></li>
+            <li><a href="formacao.html" class="footer">Formação</a></li>
+            <li><a href="protifolio.html" class="footer">Portifólio</a></li>
+            <li><a href="contato.html" class="footer">Contato</a></li>
+        </ul>
+        <ul>
+            <li>© 2025 Felipe Barbosa Milhomes.</li>
+            <li>Todos os direitos reservados.</li>
+        </ul>
+        <ul>
+            <li>E-mail: dev.felipe.milhomes@gmail.com</li>
+            <li><a href="https://github.com/DevFelipeMilhomes" target="_blank" class="footer">GitHub</a></li>
+            <li><a href="https://www.instagram.com/f3lipe.b/" target="_blank" class="footer">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+<script src="js/modeBlack.js"></script>
+<script src="js/animations.js"></script>
+</html>

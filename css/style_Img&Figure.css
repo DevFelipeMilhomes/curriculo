@@ -1,0 +1,142 @@
+
+
+
+
+/* arquivo com os estilos das imagens utilizadas no site 
+definindo bordda, tamanho, margin ... */
+
+
+img.Felipefoto{
+    float: left;
+    border-radius: 50%;
+    border: 3px solid rgb(6, 86, 206);
+    margin-right: 50px;
+    width: 300px;
+    height: auto;
+}
+
+img.certify{
+    border-radius: 40px;
+    width: 1000px;
+    box-shadow: 12px 9px 22px -9px rgba(0,0,0,0.4)
+}
+
+img.iconForm{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+img.imgSettings{
+    width: 40px;
+    height: 40px;
+}
+
+.rotateSettings{
+    animation: rotateSettings 1s;
+}
+
+img.iconMode{
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+}
+
+img.marcadoSun{
+    background-color: rgb(182, 181, 181);
+    border: 5px solid rgb(182, 181, 181);
+}
+
+img.marcadoMoon{
+    background-color: rgb(182, 181, 181);
+    border: 5px solid rgb(182, 181, 181);
+}
+img.setaBtVoltar{
+     width: 40px;
+     height: 30px;
+}
+
+img.iconLink{
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px;
+}
+
+@media only screen and (max-width:500px) {
+    img.Felipefoto{
+        float: none;
+        width: 150px !important;
+        margin-right: 10px;
+    }
+
+    img.menu{
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    img.iconMode{
+        width: 21px;
+        height: 21px;
+    }
+    img.imgSettings{
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    img.certify{
+        width: 340px;
+    }
+
+    img.setaBtVoltar{
+        width: 30px;
+        height: 20px;
+    }
+    img.iconLink{
+        width: 30px; 
+        height: 30px; 
+        margin-right: 8px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1100px){
+    img.Felipefoto{
+        width: 150px !important;
+        margin-right: 10px;
+    }
+
+    img.menu{
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    img.iconMode{
+        width: 23px;
+        height: 23px;
+    }
+    img.imgSettings{
+        margin-top: 10px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    img.certify{
+        width: 500px;
+    }
+
+    img.setaBtVoltar{
+        width: 30px;
+        height: 20px;
+    }
+    img.iconLink{
+        width: 30px; 
+        height: 30px; 
+        margin-right: 8px;
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1700px){
+    img.certify{
+        width: 700px;
+    }
+}
